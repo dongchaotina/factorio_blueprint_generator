@@ -1,22 +1,96 @@
 import json
 
-with open("helmod/recipe.json", "r") as f:
-    recipe = json.load(f)
+from factorio_blueprints.blueprints import json_to_blueprint
 
-ingredients = recipe["ingredients"]
 
-bp_json = {"blueprint": dict()}
-bp = bp_json["blueprint"]
+class Signal:
+    def __init__(self, type, name):
+        self.type = type
+        self.name = name
 
-icons = []
-for index, p in enumerate(recipe["products"]):
-    icon = dict()
-    icon["signal"] = dict()
-    icon["signal"]["type"] = p["type"]
-    icon["signal"]["name"] = p["name"]
-    icon["index"] = index
-    icons.append(icon)
 
-bp["icons"] = icons
+class Icon:
+    def __init__(self, signal, index):
+        self.signal = signal
+        self.index = index
 
-bp["entities"] = []
+
+class Position:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+class Entity:
+    def __init__(
+        self,
+        entity_number,
+        name,
+        position,
+        direction,
+        entity_type=None,
+        recipe=None,
+        tags=None,
+    ):
+        self.entity_number = entity_number
+        self.name = name
+        self.position = position
+        self.direction = direction
+        self.type = entity_type
+        self.recipe = recipe
+        self.tags = tags
+
+
+class Blueprint:
+    def __init__(self, icons, entities, item, version):
+        self.icons = icons
+        self.entities = entities
+        self.item = item
+        self.version = version
+
+    def to_json(self):
+        return json.dumps(
+            {"blueprint": self}, default=lambda o: o.__dict__, sort_keys=True, indent=4
+        )
+
+
+def test():
+    with open("helmod/recipe.json", "r") as file:
+        recipes = json.load(file)
+
+    products = recipes["products"].items()
+    icons = []
+    for index, (product_name, product) in enumerate(products):
+        signal = Signal(product["type"], product_name)
+        icon = Icon(signal, index + 1)
+        icons.append(icon)
+    ingredients = recipes["ingredients"].items()
+    entities = []
+    # for request-depot only
+    for index, (ingredient_name, ingre) in enumerate(ingredients):
+        y0 = 267.5
+        x0 = 54.5
+        delta_y = 3
+        direction = 2
+        entity = Entity(
+            entity_number=index + 1,
+            name="request-depot",
+            position=Position(x0, y0 + +index * delta_y),
+            direction=direction,
+            recipe="request-" + ingredient_name,
+            tags={"transport_depot_tags": {"drone_count": 10}},
+        )
+        entities.append(entity)
+
+    blueprint = Blueprint(icons, entities, "blueprint", 281479278493696)
+    json_result = blueprint.to_json()
+    with open("test.json", "w") as file:
+        file.write(json_result)
+
+    b64_result = json_to_blueprint(json_result)
+    with open("test.txt", "w") as file:
+        file.write(b64_result.decode("utf-8"))
+
+
+if __name__ == "__main__":
+    test()

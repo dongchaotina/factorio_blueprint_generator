@@ -1,0 +1,81 @@
+{
+    "blueprint": {
+        "entities": [
+            {
+                "direction": 2,
+                "entity_number": 1,
+                "name": "request-depot",
+                "position": {
+                    "x": 54.5,
+                    "y": 267.5
+                },
+                "recipe": "request-plastic-bar",
+                "tags": {
+                    "transport_depot_tags": {
+                        "drone_count": 10
+                    }
+                },
+                "type": null
+            },
+            {
+                "direction": 2,
+                "entity_number": 2,
+                "name": "request-depot",
+                "position": {
+                    "x": 54.5,
+                    "y": 270.5
+                },
+                "recipe": "request-glass",
+                "tags": {
+                    "transport_depot_tags": {
+                        "drone_count": 10
+                    }
+                },
+                "type": null
+            },
+            {
+                "direction": 2,
+                "entity_number": 3,
+                "name": "request-depot",
+                "position": {
+                    "x": 54.5,
+                    "y": 273.5
+                },
+                "recipe": "request-steel-plate",
+                "tags": {
+                    "transport_depot_tags": {
+                        "drone_count": 10
+                    }
+                },
+                "type": null
+            },
+            {
+                "direction": 2,
+                "entity_number": 4,
+                "name": "request-depot",
+                "position": {
+                    "x": 54.5,
+                    "y": 276.5
+                },
+                "recipe": "request-copper-plate",
+                "tags": {
+                    "transport_depot_tags": {
+                        "drone_count": 10
+                    }
+                },
+                "type": null
+            }
+        ],
+        "icons": [
+            {
+                "index": 1,
+                "signal": {
+                    "name": "low-density-structure",
+                    "type": "item"
+                }
+            }
+        ],
+        "item": "blueprint",
+        "version": 281479278493696
+    }
+}
