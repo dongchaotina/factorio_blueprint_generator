@@ -1,0 +1,210 @@
+{
+  "id": "model_2",
+  "owner": "moonfang",
+  "blocks": {
+    "block_15": {
+      "id": "block_15",
+      "name": "low-density-structure",
+      "owner": "moonfang",
+      "count": 1,
+      "power": 930000,
+      "ingredients": {
+        "plastic-bar": {
+          "name": "plastic-bar",
+          "type": "item",
+          "count": 270,
+          "state": 2
+        },
+        "glass": {
+          "name": "glass",
+          "type": "item",
+          "count": 270,
+          "state": 2
+        },
+        "steel-plate": {
+          "name": "steel-plate",
+          "type": "item",
+          "count": 135,
+          "state": 2
+        },
+        "copper-plate": {
+          "name": "copper-plate",
+          "type": "item",
+          "count": 270,
+          "state": 2
+        }
+      },
+      "products": {
+        "low-density-structure": {
+          "name": "low-density-structure",
+          "type": "item",
+          "count": 27,
+          "input": 27,
+          "state": 1
+        }
+      },
+      "recipes": {
+        "R44": {
+          "id": "R44",
+          "index": 0,
+          "name": "low-density-structure",
+          "type": "recipe",
+          "count": 27,
+          "production": 1,
+          "factory": {
+            "name": "assembling-machine-2",
+            "type": "entity",
+            "count": 6,
+            "energy": 155000,
+            "speed": 0.75,
+            "limit": 0,
+            "modules": [],
+            "effects": {
+              "speed": 0,
+              "productivity": 0,
+              "consumption": 0,
+              "pollution": 0
+            },
+            "cap": {
+              "speed": 0,
+              "productivity": 0,
+              "consumption": 0,
+              "pollution": 0
+            },
+            "speed_total": 0.75,
+            "pollution": 0.05,
+            "energy_total": 930000,
+            "pollution_total": 18.000000000000004
+          },
+          "beacons": [
+            {
+              "name": "beacon",
+              "type": "entity",
+              "count": 0,
+              "energy": 100000,
+              "combo": 1,
+              "per_factory": 0.25,
+              "per_factory_constant": 0,
+              "limit": 0,
+              "modules": [],
+              "energy_total": 0
+            }
+          ],
+          "base_time": 60,
+          "time": 10,
+          "pollution_total": 18.000000000000004,
+          "energy_total": 930000
+        }
+      },
+      "index": 0,
+      "unlinked": true,
+      "type": "recipe",
+      "time": 60,
+      "pollution_total": 18.000000000000004,
+      "summary": {
+        "building": 6,
+        "factories": {
+          "assembling-machine-2": {
+            "name": "assembling-machine-2",
+            "type": "entity",
+            "count": 6
+          }
+        },
+        "beacons": {
+          "beacon": {
+            "name": "beacon",
+            "type": "entity",
+            "count": 0
+          }
+        },
+        "modules": []
+      }
+    }
+  },
+  "ingredients": {
+    "plastic-bar": {
+      "index": 2,
+      "name": "plastic-bar",
+      "type": "item",
+      "count": 270
+    },
+    "glass": {
+      "index": 3,
+      "name": "glass",
+      "type": "item",
+      "count": 270
+    },
+    "steel-plate": {
+      "index": 4,
+      "name": "steel-plate",
+      "type": "item",
+      "count": 135
+    },
+    "copper-plate": {
+      "index": 5,
+      "name": "copper-plate",
+      "type": "item",
+      "count": 270
+    }
+  },
+  "resources": [],
+  "time": 60,
+  "version": "0.9.35",
+  "index": 0,
+  "parameters": {
+    "effects": {
+      "speed": 0,
+      "productivity": 0,
+      "consumption": 0,
+      "pollution": 0
+    }
+  },
+  "block_id": 15,
+  "recipe_id": 44,
+  "products": {
+    "low-density-structure": {
+      "index": 1,
+      "name": "low-density-structure",
+      "type": "item",
+      "count": 27
+    }
+  },
+  "summary": {
+    "factories": {
+      "assembling-machine-2": {
+        "name": "assembling-machine-2",
+        "type": "item",
+        "count": 6
+      }
+    },
+    "beacons": {
+      "beacon": {
+        "name": "beacon",
+        "type": "item",
+        "count": 0
+      }
+    },
+    "modules": [],
+    "building": 6,
+    "energy": 930000,
+    "pollution": 18.000000000000004
+  },
+  "generators": {
+    "accumulator": {
+      "name": "accumulator",
+      "type": "item",
+      "count": 20
+    },
+    "solar-panel": {
+      "name": "solar-panel",
+      "type": "item",
+      "count": 24
+    },
+    "steam-engine": {
+      "name": "steam-engine",
+      "type": "item",
+      "count": 2
+    }
+  },
+  "resource_id": 3
+}
