@@ -67,20 +67,40 @@ def test():
     ingredients = recipes["ingredients"].items()
     entities = []
     # for request-depot only
-    for index, (ingredient_name, ingre) in enumerate(ingredients):
+    index = 1
+    for ingredient_name, ingre in ingredients:
         y0 = 267.5
         x0 = 54.5
-        delta_y = 3
-        direction = 2
-        entity = Entity(
-            entity_number=index + 1,
+        # request-depot
+        request_depot_delta_y = 3
+        request_depot_direction = 2
+        request_depot_x = x0
+        request_depot_y = y0 + index * request_depot_delta_y
+        request_depot = Entity(
+            entity_number=index,
             name="request-depot",
-            position=Position(x0, y0 + +index * delta_y),
-            direction=direction,
+            position=Position(request_depot_x, request_depot_y),
+            direction=request_depot_direction,
             recipe="request-" + ingredient_name,
             tags={"transport_depot_tags": {"drone_count": 10}},
         )
-        entities.append(entity)
+        entities.append(request_depot)
+        index += 1
+        # fast-transport-belt-loader
+        fast_transport_belt_loader_direction = 6
+        fast_transport_belt_loader_x = request_depot_x - 2
+        fast_transport_belt_loader_y = request_depot_y
+        fast_transport_belt_loader = Entity(
+            entity_number=index,
+            name="fast-transport-belt-loader",
+            position=Position(
+                fast_transport_belt_loader_x, fast_transport_belt_loader_y
+            ),
+            direction=fast_transport_belt_loader_direction,
+            entity_type="output",
+        )
+        entities.append(fast_transport_belt_loader)
+        index += 1
 
     blueprint = Blueprint(icons, entities, "blueprint", 281479278493696)
     json_result = blueprint.to_json()

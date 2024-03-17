@@ -7,7 +7,7 @@
                 "name": "request-depot",
                 "position": {
                     "x": 54.5,
-                    "y": 267.5
+                    "y": 270.5
                 },
                 "recipe": "request-plastic-bar",
                 "tags": {
@@ -18,12 +18,24 @@
                 "type": null
             },
             {
-                "direction": 2,
+                "direction": 6,
                 "entity_number": 2,
+                "name": "fast-transport-belt-loader",
+                "position": {
+                    "x": 52.5,
+                    "y": 270.5
+                },
+                "recipe": null,
+                "tags": null,
+                "type": "output"
+            },
+            {
+                "direction": 2,
+                "entity_number": 3,
                 "name": "request-depot",
                 "position": {
                     "x": 54.5,
-                    "y": 270.5
+                    "y": 276.5
                 },
                 "recipe": "request-glass",
                 "tags": {
@@ -34,12 +46,24 @@
                 "type": null
             },
             {
+                "direction": 6,
+                "entity_number": 4,
+                "name": "fast-transport-belt-loader",
+                "position": {
+                    "x": 52.5,
+                    "y": 276.5
+                },
+                "recipe": null,
+                "tags": null,
+                "type": "output"
+            },
+            {
                 "direction": 2,
-                "entity_number": 3,
+                "entity_number": 5,
                 "name": "request-depot",
                 "position": {
                     "x": 54.5,
-                    "y": 273.5
+                    "y": 282.5
                 },
                 "recipe": "request-steel-plate",
                 "tags": {
@@ -50,12 +74,24 @@
                 "type": null
             },
             {
+                "direction": 6,
+                "entity_number": 6,
+                "name": "fast-transport-belt-loader",
+                "position": {
+                    "x": 52.5,
+                    "y": 282.5
+                },
+                "recipe": null,
+                "tags": null,
+                "type": "output"
+            },
+            {
                 "direction": 2,
-                "entity_number": 4,
+                "entity_number": 7,
                 "name": "request-depot",
                 "position": {
                     "x": 54.5,
-                    "y": 276.5
+                    "y": 288.5
                 },
                 "recipe": "request-copper-plate",
                 "tags": {
@@ -64,6 +100,18 @@
                     }
                 },
                 "type": null
+            },
+            {
+                "direction": 6,
+                "entity_number": 8,
+                "name": "fast-transport-belt-loader",
+                "position": {
+                    "x": 52.5,
+                    "y": 288.5
+                },
+                "recipe": null,
+                "tags": null,
+                "type": "output"
             }
         ],
         "icons": [
