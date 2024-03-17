@@ -2,6 +2,13 @@ import json
 
 from factorio_blueprints.blueprints import json_to_blueprint
 
+DIRECTIONS = {
+    "up": 0,
+    "down": 4,
+    "left": 6,
+    "right": 2,
+}
+
 
 class Signal:
     def __init__(self, type, name):
@@ -67,17 +74,18 @@ def test():
     ingredients = recipes["ingredients"].items()
     entities = []
     # for request-depot only
-    index = 1
-    for ingredient_name, ingre in ingredients:
+    entity_number = 1
+
+    for index, (ingredient_name, ingre) in enumerate(ingredients):
         y0 = 267.5
         x0 = 54.5
         # request-depot
         request_depot_delta_y = 3
-        request_depot_direction = 2
+        request_depot_direction = DIRECTIONS["right"]
         request_depot_x = x0
         request_depot_y = y0 + index * request_depot_delta_y
         request_depot = Entity(
-            entity_number=index,
+            entity_number=entity_number,
             name="request-depot",
             position=Position(request_depot_x, request_depot_y),
             direction=request_depot_direction,
@@ -85,13 +93,13 @@ def test():
             tags={"transport_depot_tags": {"drone_count": 10}},
         )
         entities.append(request_depot)
-        index += 1
+        entity_number += 1
         # fast-transport-belt-loader
-        fast_transport_belt_loader_direction = 6
+        fast_transport_belt_loader_direction = DIRECTIONS["left"]
         fast_transport_belt_loader_x = request_depot_x - 2
         fast_transport_belt_loader_y = request_depot_y
         fast_transport_belt_loader = Entity(
-            entity_number=index,
+            entity_number=entity_number,
             name="fast-transport-belt-loader",
             position=Position(
                 fast_transport_belt_loader_x, fast_transport_belt_loader_y
@@ -100,7 +108,22 @@ def test():
             entity_type="output",
         )
         entities.append(fast_transport_belt_loader)
-        index += 1
+        entity_number += 1
+        # fast-transport-belt next to fast-transport-belt-loader
+        # fast_transport_belt_direction = (
+        #     DIRECTIONS["down"] if index % 2 == 0 else DIRECTIONS["up"]
+        # )
+        fast_transport_belt_direction = DIRECTIONS["left"]
+        fast_transport_belt_x = fast_transport_belt_loader_x - 1
+        fast_transport_belt_y = fast_transport_belt_loader_y
+        fast_transport_belt = Entity(
+            entity_number=entity_number,
+            name="fast-transport-belt",
+            position=Position(fast_transport_belt_x, fast_transport_belt_y),
+            direction=fast_transport_belt_direction,
+        )
+        entities.append(fast_transport_belt)
+        entity_number += 1
 
     blueprint = Blueprint(icons, entities, "blueprint", 281479278493696)
     json_result = blueprint.to_json()
