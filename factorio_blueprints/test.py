@@ -1,6 +1,7 @@
 import json
 
 from factorio_blueprints.blueprints import json_to_blueprint
+from factorio_blueprints.helmod.helmod import decode_recipe
 
 DIRECTIONS = {
     "up": 0,
@@ -61,9 +62,9 @@ class Blueprint:
         )
 
 
-def test():
-    with open("helmod/recipe.json", "r") as file:
-        recipes = json.load(file)
+def make_blueprint_from_helmod_recipe(recipe_fp):
+    with open(recipe_fp, "r") as file:
+        recipes = decode_recipe(file.read())
 
     products = recipes["products"].items()
     icons = []
@@ -127,13 +128,13 @@ def test():
 
     blueprint = Blueprint(icons, entities, "blueprint", 281479278493696)
     json_result = blueprint.to_json()
-    with open("test.json", "w") as file:
+    with open("result.json", "w") as file:
         file.write(json_result)
 
     b64_result = json_to_blueprint(json_result)
-    with open("test.txt", "w") as file:
+    with open("result.txt", "w") as file:
         file.write(b64_result.decode("utf-8"))
 
 
 if __name__ == "__main__":
-    test()
+    make_blueprint_from_helmod_recipe("helmod.txt")
