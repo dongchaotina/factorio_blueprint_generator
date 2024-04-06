@@ -9,7 +9,7 @@
                     "x": 54.5,
                     "y": 267.5
                 },
-                "recipe": "request-advanced-circuit",
+                "recipe": "request-sulfur",
                 "tags": {
                     "transport_depot_tags": {
                         "drone_count": 10
@@ -49,7 +49,7 @@
                     "x": 54.5,
                     "y": 270.5
                 },
-                "recipe": "request-low-density-structure",
+                "recipe": "request-stone-tablet",
                 "tags": {
                     "transport_depot_tags": {
                         "drone_count": 10
@@ -89,7 +89,7 @@
                     "x": 54.5,
                     "y": 273.5
                 },
-                "recipe": "request-rocket-fuel",
+                "recipe": "request-steel-plate",
                 "tags": {
                     "transport_depot_tags": {
                         "drone_count": 10
@@ -129,7 +129,7 @@
                     "x": 54.5,
                     "y": 276.5
                 },
-                "recipe": "request-glass",
+                "recipe": "request-stone-brick",
                 "tags": {
                     "transport_depot_tags": {
                         "drone_count": 10
@@ -160,293 +160,20 @@
                 "recipe": null,
                 "tags": null,
                 "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 13,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 279.5
-                },
-                "recipe": "request-electric-motor",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 14,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 279.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 15,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 279.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 16,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 282.5
-                },
-                "recipe": "request-electronic-circuit",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 17,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 282.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 18,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 282.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 19,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 285.5
-                },
-                "recipe": "request-stone-brick",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 20,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 285.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 21,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 285.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 22,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 288.5
-                },
-                "recipe": "request-iron-plate",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 23,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 288.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 24,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 288.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 25,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 291.5
-                },
-                "recipe": "request-steel-plate",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 26,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 291.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 27,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 291.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 28,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 294.5
-                },
-                "recipe": "request-copper-plate",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 29,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 294.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 30,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 294.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
-            },
-            {
-                "direction": 2,
-                "entity_number": 31,
-                "name": "request-depot",
-                "position": {
-                    "x": 54.5,
-                    "y": 297.5
-                },
-                "recipe": "request-battery",
-                "tags": {
-                    "transport_depot_tags": {
-                        "drone_count": 10
-                    }
-                },
-                "type": null
-            },
-            {
-                "direction": 6,
-                "entity_number": 32,
-                "name": "fast-transport-belt-loader",
-                "position": {
-                    "x": 52.5,
-                    "y": 297.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": "output"
-            },
-            {
-                "direction": 6,
-                "entity_number": 33,
-                "name": "fast-transport-belt",
-                "position": {
-                    "x": 51.5,
-                    "y": 297.5
-                },
-                "recipe": null,
-                "tags": null,
-                "type": null
             }
         ],
         "icons": [
             {
                 "index": 1,
                 "signal": {
-                    "name": "satellite",
+                    "name": "se-heat-shielding",
+                    "type": "item"
+                }
+            },
+            {
+                "index": 2,
+                "signal": {
+                    "name": "stone-tablet",
                     "type": "item"
                 }
             }

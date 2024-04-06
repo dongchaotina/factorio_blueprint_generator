@@ -65,7 +65,7 @@ class Blueprint:
 def make_blueprint_from_helmod_recipe(recipe_fp):
     with open(recipe_fp, "r") as file:
         recipes = decode_recipe(file.read())
-
+    recipes = recipes["block_root"]
     products = recipes["products"].items()
     icons = []
     for index, (product_name, product) in enumerate(products):
@@ -134,6 +134,7 @@ def make_blueprint_from_helmod_recipe(recipe_fp):
     b64_result = json_to_blueprint(json_result)
     with open("result.txt", "w") as file:
         file.write(b64_result.decode("utf-8"))
+    print(b64_result.decode("utf-8"))
 
 
 if __name__ == "__main__":

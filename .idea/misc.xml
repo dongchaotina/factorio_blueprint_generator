@@ -6,5 +6,5 @@
     <option name="pathToExecutable" value="/Library/Frameworks/Python.framework/Versions/3.9/bin/black" />
     <option name="sdkName" value="Python 3.11 (factorio_blueprint_generator)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (factorio_blueprint_generator)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (autoui)" project-jdk-type="Python SDK" />
 </project>
