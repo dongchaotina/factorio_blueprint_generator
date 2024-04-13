@@ -69,6 +69,10 @@ def make_blueprint_from_helmod_recipe(recipe_fp):
     products = recipes["products"].items()
     icons = []
     for index, (product_name, product) in enumerate(products):
+        if product["amount"] == 0:
+            continue
+
+
         signal = Signal(product["type"], product_name)
         icon = Icon(signal, index + 1)
         icons.append(icon)
@@ -76,8 +80,12 @@ def make_blueprint_from_helmod_recipe(recipe_fp):
     entities = []
     # for request-depot only
     entity_number = 1
+    index = 0
+    for ingredient_name, ingre in ingredients:
 
-    for index, (ingredient_name, ingre) in enumerate(ingredients):
+        if ingre["amount"] == 0:
+            continue
+
         y0 = 267.5
         x0 = 54.5
         # request-depot
@@ -94,6 +102,7 @@ def make_blueprint_from_helmod_recipe(recipe_fp):
             tags={"transport_depot_tags": {"drone_count": 10}},
         )
         entities.append(request_depot)
+        index += 1
         entity_number += 1
         # fast-transport-belt-loader
         fast_transport_belt_loader_direction = DIRECTIONS["left"]
